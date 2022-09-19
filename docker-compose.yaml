@@ -10,3 +10,19 @@ services:
       - 80:80
     volumes:
       - ./backend:/var/www/html
+    networks:
+      - net1
+  mysql:
+    container_name: mysql
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_USER: docker
+      MYSQL_PASSWORD: docker
+      TZ: 'Asia/Tokyo'
+    networks:
+      - net1
+    ports:
+      - 3306:3306
+networks:
+  net1:
