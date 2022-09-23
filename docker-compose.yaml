@@ -20,7 +20,9 @@ services:
       - net1
   db:
     container_name: db
-    image: mysql:8.0.30
+    build:
+      context: .
+      dockerfile: ./docker/db/Dockerfile
     environment:
       MYSQL_ROOT_PASSWORD: secret
       MYSQL_USER: docker
