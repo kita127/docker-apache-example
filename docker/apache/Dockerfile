@@ -14,8 +14,8 @@ RUN docker-php-ext-install pdo_mysql
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-ADD docker/php/php.ini /usr/local/etc/php/
-ADD docker/php/apache/000-default.conf /etc/apache2/sites-enabled/
+ADD docker/apache/php.ini /usr/local/etc/php/
+ADD docker/apache/config/000-default.conf /etc/apache2/sites-enabled/
 
 WORKDIR /var/www/html
 
