@@ -19,7 +19,7 @@ ADD docker/php/apache/000-default.conf /etc/apache2/sites-enabled/
 
 WORKDIR /var/www/html
 
-COPY ../../../backend /var/www/html
+COPY ../../../webapp /var/www/html
 
 RUN chown www-data storage/ -R \
  && composer install
