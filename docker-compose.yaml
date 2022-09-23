@@ -12,8 +12,6 @@ services:
       COMPOSER_ALLOW_SUPERUSER: 1
     volumes:
       - ./webapp:/var/www/html
-      - ./docker/apache/php.ini:/usr/local/etc/php/php.ini
-      - ./docker/apache/config/000-default.conf:/etc/apache2/sites-enabled/000-default.conf
     depends_on:
       - db
     networks:
