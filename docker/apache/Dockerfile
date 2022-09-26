@@ -15,7 +15,11 @@ RUN docker-php-ext-install pdo_mysql
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 ADD docker/apache/php.ini /usr/local/etc/php/
-ADD docker/apache/config/000-default.conf /etc/apache2/sites-enabled/
+
+# Apache の conf は seites-available に作成し
+# a2ensite コマンドでシンボリックリンクを sites-enabled に作成する
+ADD docker/apache/config/000-default.conf /etc/apache2/sites-available/
+RUN a2ensite 000-default
 
 WORKDIR /var/www/html
 
