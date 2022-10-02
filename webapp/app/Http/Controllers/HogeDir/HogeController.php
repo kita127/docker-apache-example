@@ -17,8 +17,6 @@ class HogeController extends Controller
     public function __invoke(Request $request)
     {
         $ls = Hoge::all();
-
-        // 変数 hoge に laravel という文字列を設定
         return view('hoge.index', ['hoge' => $ls[0]->id]);
     }
 }
