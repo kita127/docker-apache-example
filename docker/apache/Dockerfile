@@ -12,7 +12,7 @@ RUN a2enmod rewrite
 # docker php には mysql 用のドライバが未インストールのため追加する
 RUN docker-php-ext-install pdo_mysql
 
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+COPY --from=composer:2.4.1 /usr/bin/composer /usr/bin/composer
 
 ADD docker/apache/php.ini /usr/local/etc/php/
 
