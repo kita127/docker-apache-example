@@ -19,3 +19,11 @@ $ make init
 ```
 $ make down
 ```
+
+### Enviroment
+
+- PHP
+- Laravel
+- Node.js
+    - 8.12.1
+- xdebug

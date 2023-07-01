@@ -11,6 +11,10 @@ RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash -\
  && apt-get install -y nodejs\
  && npm install npm@8.12.1 --global
 
+# xdebug のインストール
+RUN pecl install xdebug \
+ && docker-php-ext-enable xdebug
+
 # a2emod rewrite をして apache に rewrite モジュールを追加
 # これをしないと Laravel でルート以外にアクセスできない
 RUN a2enmod rewrite
