@@ -22,8 +22,9 @@ $ make down
 
 ### Enviroment
 
+- Apache
+- MySQL
 - PHP
 - Laravel
 - Node.js
-    - 8.12.1
 - xdebug
