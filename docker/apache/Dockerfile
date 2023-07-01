@@ -9,7 +9,7 @@ RUN apt-get update \
 RUN apt-get install -y gnupg
 RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash -\
  && apt-get install -y nodejs\
- && npm install npm@8.12.1 --global
+ && npm install npm@9.7.2 --global
 
 # xdebug のインストール
 RUN pecl install xdebug \
