@@ -10,6 +10,7 @@ init:
 	docker compose exec apache composer install
 	cp webapp/.env.example webapp/.env
 	docker compose exec apache php artisan key:generate
+	docker compose exec apache npm install
 
 #== terminate
 down:

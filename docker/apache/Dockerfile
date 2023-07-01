@@ -5,6 +5,12 @@ RUN apt-get update \
  && apt-get install -y zlib1g-dev libzip-dev unzip vim iputils-ping net-tools\
  && docker-php-ext-install zip
 
+# node と npm をインストール
+RUN apt-get install -y gnupg
+RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash -\
+ && apt-get install -y nodejs\
+ && npm install npm@8.12.1 --global
+
 # a2emod rewrite をして apache に rewrite モジュールを追加
 # これをしないと Laravel でルート以外にアクセスできない
 RUN a2enmod rewrite
