@@ -1,4 +1,8 @@
 
+default:
+	echo command: init
+
+
 init:
 	docker compose up -d --build
 	docker compose exec apache composer install
