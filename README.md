@@ -38,6 +38,4 @@ $ make down
 ## Vite
 
 フロントは更新したら `npm run build` する。
-
-docker コンテナで動かしているせいか `npm run dev` しても Vite からフロントのソースがとれない.
-かわりに `npm run build` してコンパイルしたものを提供する｡
+開発中は `npm run dev`。
