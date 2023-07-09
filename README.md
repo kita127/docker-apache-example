@@ -20,7 +20,7 @@ $ make init
 $ make down
 ```
 
-### Enviroment
+## Enviroment
 
 - Apache
 - MySQL
@@ -28,3 +28,9 @@ $ make down
 - Laravel
 - Node.js
 - xdebug
+
+
+## Vite
+
+docker コンテナで動かしているせいか `npm run dev` しても Vite からフロントのソースがとれない.
+かわりに `npm run build` してコンパイルしたものを提供する｡
