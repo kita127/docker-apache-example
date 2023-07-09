@@ -22,15 +22,22 @@ $ make down
 
 ## Enviroment
 
-- Apache
-- MySQL
-- PHP
-- Laravel
-- Node.js
-- xdebug
+- main branch
+    - Apache
+    - MySQL
+    - PHP
+    - Laravel
+    - Vite
+    - Node.js
+    - xdebug
+- vue branch
+    - Vue.js
+    - TypeScript
 
 
 ## Vite
+
+フロントは更新したら `npm run build` する。
 
 docker コンテナで動かしているせいか `npm run dev` しても Vite からフロントのソースがとれない.
 かわりに `npm run build` してコンパイルしたものを提供する｡
