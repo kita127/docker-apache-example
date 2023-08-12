@@ -13,7 +13,6 @@ https://kita127.hatenablog.com/entry/2022/10/02/145614
 $ make init
 ```
 
-
 ### Terminate
 
 ```
@@ -27,7 +26,6 @@ $ make down
     1. `$ docker compose exec apache bash`
 1. `$ npm run dev` を実行する
 1.  ブラウザから `http://localhost:80` にアクセス
-1. Chrome DevTool などから開発者ツールを開きコンソールに Vue のバージョンが表示されればOK
 
 ## Enviroment
 
@@ -42,7 +40,7 @@ $ make down
 - vue branch
     - Vue.js
     - TypeScript
-
+    - Chrome DevTool などから開発者ツールを開きコンソールに Vue のバージョンが表示されればOK
 
 ## Vite
 
